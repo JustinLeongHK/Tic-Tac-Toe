@@ -5,7 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="boardGame.css" />
-    <script src="boardGame.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const single = document.querySelector(".singlePlayer");
+        const multi = document.querySelector(".multiPlayer");
+
+        single.addEventListener("click", () => {
+          window.location.href = "boardGame.html?mode=single";
+        });
+
+        multi.addEventListener("click", () => {
+          window.location.href = "boardGame.html?mode=multi";
+        });
+      });
+    </script>
     <title>HomePage</title>
   </head>
   <body>
