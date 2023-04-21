@@ -18,7 +18,7 @@ header {
   display: flex;
   justify-content: center;
   margin: 50px;
-  gap: 100px;
+  gap: 200px;
 }
 
 header > h1 {
@@ -44,6 +44,7 @@ header > h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .subcontainer-1,
@@ -61,13 +62,16 @@ img[src="icons/hand.svg"] {
   width: 50px;
 }
 
+img[src="icons/AI.svg"] {
+  margin-bottom: 15px;
+}
 img {
   width: 100px;
   height: auto;
 }
 
-.singlePlayer:active,
-.multiPlayer:active,
+.singlePlayer:hover,
+.multiPlayer:hover,
 img[src="icons/refresh.svg"]:active,
 img[src="icons/home.svg"]:active {
   transform: translateY(-5px);
@@ -76,7 +80,7 @@ img[src="icons/home.svg"]:active {
 
 main {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
 }
@@ -94,12 +98,18 @@ main {
 .box {
   width: 200px;
   height: 200px;
-  transition: transform 0.5s;
-  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
 }
 
-.box:hover {
-  transform: scale(1.1);
-  border: 1px solid;
-  border-radius: 10px;
+header.game {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.player {
+  height: 300px;
 }
